@@ -4,35 +4,50 @@ Plan de proiect
 
 Membrii: Ardeleanu Matei-Alexandru, Andone Rares-Constantin, Adam Alberto.
 
-Framework utilizat: React.JS
+Framework utilizat pentru front-end: React.JS
 
-Register / Login
-Register campuri: Username,Nume,Prenume,Parola,Checkbox Profesor,Buton submit.
-Login campuri: Username,Parola,Buton submit.
+///Prima accesare a aplicatiei
+Odata intrat pe aplicatie, utilizatorul va vedea o fereastra cu 2 optiuni: Register si Login. In cazul in care DDL-ul pentru livrabile este depasit, la prima accesare a contului va exista doar un buton pentru Evaluare al proiectelor deja existente.
 
-Toate proiectele au acelasi DDL.
+1. Fereastra Register:
+Input fields:
+Username
+Nume, prenume
+Email
+Parola
+Radio button Student/Profesor (Obligatoriu selectata o varianta)
+Buton submit
 
-/// STUDENT
+2. Fereastra login
+Username
+Parola
+Buton submit
 
-Iti apare pagina goala, iti zice ca nu esti in nicio echipa si zice daca vrei sa creezi o echipa sau sa dai join.
-Pentru butonul de join la echipa, cand apesi pe el iti apare Spinner cu echipele existente, odata ce ai selectat o echipa,
-iti apar informatii jos legate de echipa respectiva (Membrii,Livrabile,Numele,Creatorul,Obiectivele proiectului), 
-sub informatii un buton de Submit.
-Daca dai create, iti apar niste field uri (Numele,Livrabile,Obiectivele proiectului) si buton de Submit.
+///Perspectiva cont student
+La prima accesare a aplicatiei din perspectiva unui cont de student, acesta nu va apartine niciunui proiect. Astfel, va fi intampinat de 2 butoane (Create si Join).
 
-Daca te loghezi si esti intr-o echipa, arata datele echipei respective, sectiune de Upload, calendarul cu DDL si un timer.
+///Selectare Join
+Studentul va avea la dispozitie un Spinner ce contine toate proiectele create pana in momentul respectiv. La selectarea oricarei echipe din Spinner, vor fi afisate informatii precum:
+Numele echipei, creatorul echipei, membrii, descrierea proiectului, livrabilele.
+De asemenea va avea posibilitatea de a selecta Join, pentru a se alatura echipei selectate.
 
-Exista un buton 'Acorda Nota' care va fi valabil doar dupa expirarea DDL, odata apasat iti arata Spinner cu toate echipele
-inafara de a ta, un numeric input pentru nota  ( limit 1.00 - 10.00 ) si un buton Submit.
+///Selectare Create
+Input fields:
+Numele echipei, descrierea proiectului, livrabilele
+De asemenea, studentul va avea posibilitatea de a selecta Create.
 
+///Evaluarea proiectelor existente
+In aceasta fereastra, va exista un Spinner ce continte toate proiectele create pana in momentul respectiv si un input field pentru un numar (cuprins intre 1 si 10) cu maxim 2 cifre fractionare.
+Studentul va putea modifica nota acordata la maximum 24 de ore dupa primul Submit.
+Va exista si un buton de "submit vote".
 
-/// PROFESOR
+///Sectiune upload
+In aceasta sectiune, creatorul fiecarei echipe, in urma consultarii detaliate cu restul membrilor echipei, va putea da upload la un videoclip demonstrativ sau link in cadrul fiecarui livrabil. Aceasta optiune de upload va exista, pentru fiecare livrabil, in functie de DDL.
 
-Cand te-ai logat ca profesor, ai un tabel cu toate echipele si media notelor. Media notelor sa calculeaza fara cea mai mica
-si cea mai mare nota. ( o sa scoatem daca avem 1 1 2 3 5 7 10 10, doar un 1 si un 10 )
+///Perspectiva cont profesor
 
+Odata logat ca profesor, va fi afisat un tabel cu toate proiectele, iar in dreptul fiecaruia, va fi afisata media notelor acordate proiectului respectiv (omitand MIN si MAX).
 
-/// FUNCTII(ONALITATI)
+///Detalii aplicatie
 
-Fiecare student poate vota pentru toate celelalte echipe in care nu e. De asemenea, fiecare student isi poate modifica nota data
-pana la un anumit DDL (hard codat).
+Aplicatia va avea 3 DDL-uri prestabilite
