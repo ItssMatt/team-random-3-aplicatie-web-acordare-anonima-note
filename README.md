@@ -1,1 +1,5 @@
-# team-random-3-aplicatie-web-acordare-anonima-note
+# Team Random 3
+
+Membrii: Ardeleanu Matei-Alexandru, Andone Rares-Constantin, Adam Alberto.
+
+Framework utilizat: React.JS
